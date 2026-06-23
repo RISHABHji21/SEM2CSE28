@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simplest Finder</title>
+</head>
+<body>
+
+    <h2>Find the Largest Number</h2>
+
+    <!-- 5 Simple Input Fields -->
+    <input type="number" id="num1" placeholder="Number 1"><br><br>
+    <input type="number" id="num2" placeholder="Number 2"><br><br>
+    <input type="number" id="num3" placeholder="Number 3"><br><br>
+    <input type="number" id="num4" placeholder="Number 4"><br><br>
+    <input type="number" id="num5" placeholder="Number 5"><br><br>
+
+    <!-- Trigger Button -->
+    <button onclick="findLargest()">Find Largest</button>
+
+    <!-- Result Display -->
+    <h3 id="result"></h3>
+
+    <script>
+    function findLargest() {
+        // 1. Get numbers from the page
+        let n1 = Number(document.getElementById('num1').value);
+        let n2 = Number(document.getElementById('num2').value);
+        let n3 = Number(document.getElementById('num3').value);
+        let n4 = Number(document.getElementById('num4').value);
+        let n5 = Number(document.getElementById('num5').value);
+
+        let largest;
+
+        // 2. Use simple if-else to find the biggest
+        if (n1 >= n2 && n1 >= n3 && n1 >= n4 && n1 >= n5) {
+            largest = n1;
+        } else if (n2 >= n1 && n2 >= n3 && n2 >= n4 && n2 >= n5) {
+            largest = n2;
+        } else if (n3 >= n1 && n3 >= n2 && n3 >= n4 && n3 >= n5) {
+            largest = n3;
+        } else if (n4 >= n1 && n4 >= n2 && n4 >= n3 && n4 >= n4) {
+            largest = n4;
+        } else {
+            largest = n5;
+        }
+
+        // 3. Print the answer on the page
+        document.getElementById('result').innerHTML = "Largest: " + largest;
+    }
+    </script>
+
+</body>
+</html>
